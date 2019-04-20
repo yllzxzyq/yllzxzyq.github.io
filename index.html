@@ -189,7 +189,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Cambiar a barra de navegación">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -217,7 +217,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Inicio</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -234,7 +234,7 @@
 
     
 
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>Etiquetas</a>
+    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>Schlagwörter</a>
 
   </li>
         
@@ -251,7 +251,7 @@
 
     
 
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>Categorías</a>
+    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>Kategorien</a>
 
   </li>
         
@@ -375,14 +375,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-04-20 16:45:55 / Modificado por: 18:49:33" itemprop="dateCreated datePublished" datetime="2019-04-20T16:45:55+08:00">2019-04-20</time>
+              <time title="Erstellt: 2019-04-20 16:45:55 / Geändert am: 18:49:33" itemprop="dateCreated datePublished" datetime="2019-04-20T16:45:55+08:00">2019-04-20</time>
             
 
             
@@ -482,6 +482,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/yllzxzyq/yllzxzyq.github.io.git/2019/04/20/Regression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Nick">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://github.com/yllzxzyq/yllzxzyq.github.io/blob/master/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nick's programer dream">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/20/Regression/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-20 15:49:37 / Geändert am: 21:49:45" itemprop="dateCreated datePublished" datetime="2019-04-20T15:49:37+08:00">2019-04-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title：Regression to Predict Lifetime<br>date：2019-04-20 16:45:55</p>
+<hr>
+<p>​    This example of machine learning uses a linear regression approach to train BMI and lifetime data sets to predict the life of Bostonians. </p>
+<p>​    By analyzing the problem, assuming that the BMI and the lifetime are linearly related. The data is processed using the pandas library, and the model is trained using the LinearRegression function provided by the scikit-learn library. Next, we can predict the lifetime based on the BMI. The specific way is as follows:</p>
+<h4 id="First-to-do-Add-import-statements"><a href="#First-to-do-Add-import-statements" class="headerlink" title="First to do:  Add import statements"></a>First to do:  Add import statements</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">from sklearn.linear_model import LinearRegression</span><br></pre></td></tr></table></figure>
+<h4 id="Second-Load-the-life-data"><a href="#Second-Load-the-life-data" class="headerlink" title="Second: Load the life data"></a>Second: Load the life data</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bmi_life_data = pd.read_csv(<span class="string">'bmi_and_life_expectancy.csv'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Next-Make-and-fit-the-linear-regression-model"><a href="#Next-Make-and-fit-the-linear-regression-model" class="headerlink" title="Next: Make and fit the linear regression model"></a>Next: Make and fit the linear regression model</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bmi_life_model = LinearRegression()</span><br><span class="line">bmi_life_model.fit(bmi_life_data[[<span class="string">'BMI'</span>]] , bmi_life_data[[<span class="string">'Life expectancy'</span>]])</span><br></pre></td></tr></table></figure>
+<h4 id="Finally-Make-a-prediction-using-the-model"><a href="#Finally-Make-a-prediction-using-the-model" class="headerlink" title="Finally: Make a prediction using the model"></a>Finally: Make a prediction using the model</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laos_life_exp =bmi_life_model.predict(<span class="number">21.07931</span>)</span><br></pre></td></tr></table></figure>
+<p>If you want to try in your computer, clone the file “regression” in this website: <a href="https://github.com/yllzxzyq/Nick-life-of-code">source code and data</a>.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/yllzxzyq/yllzxzyq.github.io.git/2019/04/20/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -520,14 +672,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-04-20 13:43:12" itemprop="dateCreated datePublished" datetime="2019-04-20T13:43:12+08:00">2019-04-20</time>
+              <time title="Erstellt: 2019-04-20 13:43:12" itemprop="dateCreated datePublished" datetime="2019-04-20T13:43:12+08:00">2019-04-20</time>
             
 
             
@@ -658,8 +810,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">entradas</span>
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -716,7 +868,7 @@
 </div>
 
 
-  <div class="powered-by">Creado mediante <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -724,7 +876,7 @@
 
 
 
-  <div class="theme-info">Tema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
 
 
 
